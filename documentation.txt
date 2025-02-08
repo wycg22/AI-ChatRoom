@@ -1,0 +1,22 @@
+**This file only contains the user manual and description of our design potions of the documentation. Look for the README file for how to run the code.**
+
+User Manual:
+The roast and fact-checking ai features can be used on messages sent my other users. Simply log into the website, enter a chatroom, scroll up to look for past messages
+and click the 'roast' or 'fact?' button to use the feature of your choice. You can generate multiple AI responses at a time but since the LLM is locally run, it will take 
+longer to receive a response.
+
+What is Mistral Instruct and why we chose it:
+Mistral Instruct is an LLM from Mistral AI that claims to be uncensored (which seems to be true from our testing). Since one of the features involves roasting, we wanted to find 
+an LLM that was uncensored so it doesn't refuse to generate a roast when the chat involves controversial topics such as politics. This model was also able to generate high-quality 
+responses within a reasonable amount of time relative to other models we tested.
+
+Alternatives considered:
+
+Llama 3.2 8b Instruct: This model generated high-quality responses for fact-checking and roasting but had trouble generating roasts for more controversial topics.
+
+Llama 3.2 3b Instruct: This model generated responses faster relative to Mistral Instruct but the quality of responses were not very consistent.
+
+Hermes: We wanted to test this model due to it's uncensored nature. This model generated some of the most creative and high quality responses, but due to it's high RAM 
+requirement of 16gb, we had trouble testing it and the responses would either take too long to generate, or not generate at all when multiple requests are made.
+
+Ghost 7B v0.9.1: This model had trouble understanding the prompt at times.
